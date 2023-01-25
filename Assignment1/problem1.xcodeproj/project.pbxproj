@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		418631D6297FCCF2008FF66A /* item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418631D5297FCCF2008FF66A /* item.swift */; };
+		418631D8297FCFF7008FF66A /* itemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418631D7297FCFF7008FF66A /* itemType.swift */; };
+		418631DA29803727008FF66A /* protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418631D929803727008FF66A /* protocol.swift */; };
 		419B875A297ED40000BAA760 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419B8759297ED40000BAA760 /* main.swift */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +26,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		418631D5297FCCF2008FF66A /* item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = item.swift; sourceTree = "<group>"; };
+		418631D7297FCFF7008FF66A /* itemType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = itemType.swift; sourceTree = "<group>"; };
+		418631D929803727008FF66A /* protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = protocol.swift; sourceTree = "<group>"; };
 		419B8756297ED40000BAA760 /* problem1 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = problem1; sourceTree = BUILT_PRODUCTS_DIR; };
 		419B8759297ED40000BAA760 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,6 +64,9 @@
 			isa = PBXGroup;
 			children = (
 				419B8759297ED40000BAA760 /* main.swift */,
+				418631D5297FCCF2008FF66A /* item.swift */,
+				418631D929803727008FF66A /* protocol.swift */,
+				418631D7297FCFF7008FF66A /* itemType.swift */,
 			);
 			path = problem1;
 			sourceTree = "<group>";
@@ -120,7 +129,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				418631D6297FCCF2008FF66A /* item.swift in Sources */,
+				418631D8297FCFF7008FF66A /* itemType.swift in Sources */,
 				419B875A297ED40000BAA760 /* main.swift in Sources */,
+				418631DA29803727008FF66A /* protocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
