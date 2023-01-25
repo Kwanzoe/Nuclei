@@ -7,32 +7,45 @@
 
 import problem1
 
-
 enum InputError: Error{
-    case inputError
+    case invalidInput
 }
 
-func main() {
+func main() throws {
 
     var name: String
-    var price: Double
+    var price: Double?
     var type: String
-    var quantity: Double
+    var quantity: Double?
     var key: String = "y"
-    var itemArr: [Item] = []
-   
+    var itemArr: [ItemObject] = []
+    var itemFactoryObj = ItemFactory()
     
     while key.lowercased() != "q"{
+        
         print("Name: ")
         name = readLine()!
+        
         print("Price: ")
-        price = Double(readLine()!) ?? 0.0
+        price = Double(readLine()!)
+        guard price != nil else{
+            throw InputError.invalidInput
+        }
+        
         print("Type: ")
         type = readLine()!
-        print("Quantity: ")
-        quantity = Double(readLine()!) ?? 0
+        guard ItemType(rawValue: type) != nil else{
+            throw InputError.invalidInput
+        }
+        type = type.lowercased()
         
-        itemArr.append(Item(name: name, price: price, type: type, quantity: quantity))
+        print("Quantity: ")
+        quantity = Double(readLine()!)
+        guard quantity != nil else{
+            throw InputError.invalidInput
+        }
+        
+        itemArr.append(itemFactoryObj.getItem(name: name, price: price!, type: ItemType(rawValue: type)!, quantity: quantity!))
         
         print("Do you wish to add more items? Press Y to continue or Q to quit")
         key = readLine()!
@@ -46,5 +59,19 @@ func main() {
 
 }
 
+func run(){
+    
+    do{
+        try main()
+    }
+    catch InputError.invalidInput{
+        print("Inavlid input!")
+        run()
+    }
+    catch{
+        print(error)
+    }
+}
+run()
 
-main()
+
