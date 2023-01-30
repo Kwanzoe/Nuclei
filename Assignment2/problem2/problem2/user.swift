@@ -23,8 +23,4 @@ class User: Codable{
         self.courses = courses
     }
     
-    
-    func display() {
-        
-    }
 }

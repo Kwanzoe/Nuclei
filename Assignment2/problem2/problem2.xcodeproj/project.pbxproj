@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		41139D172988359000274DD2 /* error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41139D162988359000274DD2 /* error.swift */; };
 		41A316432983E10D009503A3 /* files.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A316422983E10D009503A3 /* files.swift */; };
-		41A316452983E1D1009503A3 /* encoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A316442983E1D1009503A3 /* encoder.swift */; };
+		41B2F32C2987CC4300798532 /* operate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B2F32B2987CC4300798532 /* operate.swift */; };
+		41B2F32E2987E67200798532 /* options.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B2F32D2987E67200798532 /* options.swift */; };
 		41F2248529866E8D007714B0 /* menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F2248429866E8D007714B0 /* menu.swift */; };
-		41F8CE9D2986538C00A1A156 /* decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F8CE9C2986538C00A1A156 /* decoder.swift */; };
 		41F8CE9F2986621500A1A156 /* readFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F8CE9E2986621500A1A156 /* readFile.swift */; };
-		41F8CEA12986648500A1A156 /* essentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F8CEA02986648500A1A156 /* essentials.swift */; };
+		41F8CEA12986648500A1A156 /* utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F8CEA02986648500A1A156 /* utils.swift */; };
 		41FAE0B2298192A200531C03 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FAE0B1298192A200531C03 /* main.swift */; };
-		41FAE0B92981937B00531C03 /* protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FAE0B82981937B00531C03 /* protocol.swift */; };
 		41FAE0BB2981941500531C03 /* user.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FAE0BA2981941500531C03 /* user.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,15 +31,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		41139D162988359000274DD2 /* error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = error.swift; sourceTree = "<group>"; };
 		41A316422983E10D009503A3 /* files.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = files.swift; sourceTree = "<group>"; };
-		41A316442983E1D1009503A3 /* encoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = encoder.swift; sourceTree = "<group>"; };
+		41B2F32B2987CC4300798532 /* operate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = operate.swift; sourceTree = "<group>"; };
+		41B2F32D2987E67200798532 /* options.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = options.swift; sourceTree = "<group>"; };
 		41F2248429866E8D007714B0 /* menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menu.swift; sourceTree = "<group>"; };
-		41F8CE9C2986538C00A1A156 /* decoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = decoder.swift; sourceTree = "<group>"; };
 		41F8CE9E2986621500A1A156 /* readFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = readFile.swift; sourceTree = "<group>"; };
-		41F8CEA02986648500A1A156 /* essentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = essentials.swift; sourceTree = "<group>"; };
+		41F8CEA02986648500A1A156 /* utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = utils.swift; sourceTree = "<group>"; };
 		41FAE0AE298192A200531C03 /* problem2 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = problem2; sourceTree = BUILT_PRODUCTS_DIR; };
 		41FAE0B1298192A200531C03 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		41FAE0B82981937B00531C03 /* protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = protocol.swift; sourceTree = "<group>"; };
 		41FAE0BA2981941500531C03 /* user.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = user.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -54,6 +54,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4190C57C2987CB8D008A0ABF /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				41F8CEA02986648500A1A156 /* utils.swift */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		41B2F32F2987E8F900798532 /* obsolete */ = {
+			isa = PBXGroup;
+			children = (
+				41F8CE9E2986621500A1A156 /* readFile.swift */,
+				41A316422983E10D009503A3 /* files.swift */,
+			);
+			path = obsolete;
+			sourceTree = "<group>";
+		};
 		41FAE0A5298192A100531C03 = {
 			isa = PBXGroup;
 			children = (
@@ -73,15 +90,14 @@
 		41FAE0B0298192A200531C03 /* problem2 */ = {
 			isa = PBXGroup;
 			children = (
+				4190C57C2987CB8D008A0ABF /* utils */,
 				41FAE0B1298192A200531C03 /* main.swift */,
-				41A316442983E1D1009503A3 /* encoder.swift */,
-				41F8CE9C2986538C00A1A156 /* decoder.swift */,
 				41FAE0BA2981941500531C03 /* user.swift */,
-				41A316422983E10D009503A3 /* files.swift */,
-				41F8CE9E2986621500A1A156 /* readFile.swift */,
 				41F2248429866E8D007714B0 /* menu.swift */,
-				41F8CEA02986648500A1A156 /* essentials.swift */,
-				41FAE0B82981937B00531C03 /* protocol.swift */,
+				41B2F32D2987E67200798532 /* options.swift */,
+				41B2F32B2987CC4300798532 /* operate.swift */,
+				41139D162988359000274DD2 /* error.swift */,
+				41B2F32F2987E8F900798532 /* obsolete */,
 			);
 			path = problem2;
 			sourceTree = "<group>";
@@ -144,14 +160,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41B2F32C2987CC4300798532 /* operate.swift in Sources */,
 				41F8CE9F2986621500A1A156 /* readFile.swift in Sources */,
-				41F8CE9D2986538C00A1A156 /* decoder.swift in Sources */,
-				41A316452983E1D1009503A3 /* encoder.swift in Sources */,
 				41FAE0B2298192A200531C03 /* main.swift in Sources */,
-				41FAE0B92981937B00531C03 /* protocol.swift in Sources */,
 				41FAE0BB2981941500531C03 /* user.swift in Sources */,
-				41F8CEA12986648500A1A156 /* essentials.swift in Sources */,
+				41B2F32E2987E67200798532 /* options.swift in Sources */,
+				41F8CEA12986648500A1A156 /* utils.swift in Sources */,
 				41A316432983E10D009503A3 /* files.swift in Sources */,
+				41139D172988359000274DD2 /* error.swift in Sources */,
 				41F2248529866E8D007714B0 /* menu.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
