@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		410684912989968100ADE1A3 /* vertex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410684902989968100ADE1A3 /* vertex.swift */; };
 		41631DA62988E7690089F557 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41631DA52988E7690089F557 /* main.swift */; };
+		41EC5BEF298A8F2E00073064 /* edge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EC5BEE298A8F2E00073064 /* edge.swift */; };
+		41EC5BF1298A8F6600073064 /* graphable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EC5BF0298A8F6600073064 /* graphable.swift */; };
+		41EC5BF3298A904F00073064 /* adjacencyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EC5BF2298A904F00073064 /* adjacencyList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +27,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		410684902989968100ADE1A3 /* vertex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vertex.swift; sourceTree = "<group>"; };
 		41631DA22988E7690089F557 /* problem3 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = problem3; sourceTree = BUILT_PRODUCTS_DIR; };
 		41631DA52988E7690089F557 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		41EC5BEE298A8F2E00073064 /* edge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = edge.swift; sourceTree = "<group>"; };
+		41EC5BF0298A8F6600073064 /* graphable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = graphable.swift; sourceTree = "<group>"; };
+		41EC5BF2298A904F00073064 /* adjacencyList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = adjacencyList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +66,20 @@
 			isa = PBXGroup;
 			children = (
 				41631DA52988E7690089F557 /* main.swift */,
+				417DE83E298AD82C00431619 /* Sources */,
 			);
 			path = problem3;
+			sourceTree = "<group>";
+		};
+		417DE83E298AD82C00431619 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				410684902989968100ADE1A3 /* vertex.swift */,
+				41EC5BF2298A904F00073064 /* adjacencyList.swift */,
+				41EC5BF0298A8F6600073064 /* graphable.swift */,
+				41EC5BEE298A8F2E00073064 /* edge.swift */,
+			);
+			path = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,7 +140,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41EC5BF1298A8F6600073064 /* graphable.swift in Sources */,
 				41631DA62988E7690089F557 /* main.swift in Sources */,
+				41EC5BEF298A8F2E00073064 /* edge.swift in Sources */,
+				410684912989968100ADE1A3 /* vertex.swift in Sources */,
+				41EC5BF3298A904F00073064 /* adjacencyList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
