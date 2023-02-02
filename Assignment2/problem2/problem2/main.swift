@@ -18,13 +18,13 @@ func main(){
     let operationObj = Operate()
 
     // Enum for option selected
-    let optionEnumVal: Options = .invalid
+    var optionEnumVal: Options = .invalid
 
 
     // Running the Menu
 
     repeat{
-        var optionEnumVal = menuObj.menu()
+        optionEnumVal = menuObj.menu()
 
         if optionEnumVal == .exit{
             break

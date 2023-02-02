@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		410684912989968100ADE1A3 /* vertex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410684902989968100ADE1A3 /* vertex.swift */; };
+		410684912989968100ADE1A3 /* node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410684902989968100ADE1A3 /* node.swift */; };
+		414E97BE298B9102004963CB /* otherOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414E97BD298B9102004963CB /* otherOperations.swift */; };
+		414E97C0298C20DB004963CB /* menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414E97BF298C20DB004963CB /* menu.swift */; };
+		414E97C2298C21EF004963CB /* menuOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414E97C1298C21EF004963CB /* menuOptions.swift */; };
+		414E97C4298C2A4A004963CB /* errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414E97C3298C2A4A004963CB /* errors.swift */; };
 		41631DA62988E7690089F557 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41631DA52988E7690089F557 /* main.swift */; };
 		41EC5BEF298A8F2E00073064 /* edge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EC5BEE298A8F2E00073064 /* edge.swift */; };
 		41EC5BF1298A8F6600073064 /* graphable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EC5BF0298A8F6600073064 /* graphable.swift */; };
@@ -27,7 +31,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		410684902989968100ADE1A3 /* vertex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vertex.swift; sourceTree = "<group>"; };
+		410684902989968100ADE1A3 /* node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = node.swift; sourceTree = "<group>"; };
+		414E97BD298B9102004963CB /* otherOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = otherOperations.swift; sourceTree = "<group>"; };
+		414E97BF298C20DB004963CB /* menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menu.swift; sourceTree = "<group>"; };
+		414E97C1298C21EF004963CB /* menuOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menuOptions.swift; sourceTree = "<group>"; };
+		414E97C3298C2A4A004963CB /* errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = errors.swift; sourceTree = "<group>"; };
 		41631DA22988E7690089F557 /* problem3 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = problem3; sourceTree = BUILT_PRODUCTS_DIR; };
 		41631DA52988E7690089F557 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		41EC5BEE298A8F2E00073064 /* edge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = edge.swift; sourceTree = "<group>"; };
@@ -74,10 +82,14 @@
 		417DE83E298AD82C00431619 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				410684902989968100ADE1A3 /* vertex.swift */,
+				410684902989968100ADE1A3 /* node.swift */,
+				414E97C3298C2A4A004963CB /* errors.swift */,
 				41EC5BF2298A904F00073064 /* adjacencyList.swift */,
+				414E97BD298B9102004963CB /* otherOperations.swift */,
 				41EC5BF0298A8F6600073064 /* graphable.swift */,
 				41EC5BEE298A8F2E00073064 /* edge.swift */,
+				414E97BF298C20DB004963CB /* menu.swift */,
+				414E97C1298C21EF004963CB /* menuOptions.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -141,9 +153,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				41EC5BF1298A8F6600073064 /* graphable.swift in Sources */,
+				414E97BE298B9102004963CB /* otherOperations.swift in Sources */,
+				414E97C4298C2A4A004963CB /* errors.swift in Sources */,
 				41631DA62988E7690089F557 /* main.swift in Sources */,
 				41EC5BEF298A8F2E00073064 /* edge.swift in Sources */,
-				410684912989968100ADE1A3 /* vertex.swift in Sources */,
+				410684912989968100ADE1A3 /* node.swift in Sources */,
+				414E97C2298C21EF004963CB /* menuOptions.swift in Sources */,
+				414E97C0298C20DB004963CB /* menu.swift in Sources */,
 				41EC5BF3298A904F00073064 /* adjacencyList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

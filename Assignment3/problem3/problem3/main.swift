@@ -6,29 +6,138 @@
 //
 
 import Foundation
+
+func run() throws {
     
-let adjacencyList = AdjacencyList<String>()
+    let menu = Menu()
+    
+    let adjacencyList = AdjacencyList<String>()
+    let operations = Operate(adjacencyList: adjacencyList)
+    var optionType: MenuOptions = .invalid
+    
+    repeat{
+        optionType = menu.menu()
 
-let singapore = adjacencyList.createVertex(data: "Singapore")
-let tokyo = adjacencyList.createVertex(data: "Tokyo")
-let hongKong = adjacencyList.createVertex(data: "Hong Kong")
-let detroit = adjacencyList.createVertex(data: "Detroit")
-let sanFrancisco = adjacencyList.createVertex(data: "San Francisco")
-let washingtonDC = adjacencyList.createVertex(data: "Washington DC")
-let austinTexas = adjacencyList.createVertex(data: "Austin Texas")
-let seattle = adjacencyList.createVertex(data: "Seattle")
+        if optionType == .exit{
+            break
+        }
+        
+        else{
+            
+            switch optionType{
+                
+            case .add:
+                
+                print("Node ID: ")
+                let nodeId = readLine()
+                
+                print("Node name: ")
+                let nodeName = readLine()
+                
+                print("Additional info: ")
+                let additionalInfo = readLine()
+                
+                guard nodeId != nil || nodeName != nil || additionalInfo != nil else{
+                    throw InputError.invalidInput
+                }
+                
+                adjacencyList.createVertex(nodeId: nodeId!, nodeName: nodeName!, additionalInfo: additionalInfo!)
+                
+            case .addDependency:
+                
+                print("Enter Source Node Id")
+                let sourceNodeId = readLine()!
+                print("Enter Destination Node Id")
+                let destinationNodeId = readLine()!
+                
+                let sourceNode = try operations.getNode(nodeId: sourceNodeId)
+                let destinationNode = try operations.getNode(nodeId: destinationNodeId
+                )
 
-adjacencyList.add(.undirected, from: singapore, to: hongKong)
-adjacencyList.add(.undirected, from: singapore, to: tokyo)
-adjacencyList.add(.undirected, from: hongKong, to: tokyo)
-adjacencyList.add(.undirected, from: tokyo, to: detroit)
-adjacencyList.add(.undirected, from: tokyo, to: washingtonDC)
-adjacencyList.add(.undirected, from: hongKong, to: sanFrancisco)
-adjacencyList.add(.undirected, from: detroit, to: austinTexas)
-adjacencyList.add(.undirected, from: austinTexas, to: washingtonDC)
-adjacencyList.add(.undirected, from: sanFrancisco, to: washingtonDC)
-adjacencyList.add(.undirected, from: washingtonDC, to: seattle)
-adjacencyList.add(.undirected, from: sanFrancisco, to: seattle)
-adjacencyList.add(.undirected, from: austinTexas, to: sanFrancisco)
+                adjacencyList.addDirectedEdge(from: sourceNode, to: destinationNode)
+            
+            case .parents:
+                print("Enter Node Id")
+                let nodeId = readLine()!
+                let node = try operations.getNode(nodeId: nodeId)
+                
+                print(operations.parents(from: node))
+                
+            case .children:
+                print("Enter Node Id")
+                let nodeId = readLine()!
+                let node = try operations.getNode(nodeId: nodeId)
+                
+                print(operations.children(from: node))
+                
+            case .ancestors:
+                print("Enter Node Id")
+                let nodeId = readLine()!
+                let node = try operations.getNode(nodeId: nodeId)
+                
+                print(operations.ancestors(from: node))
+            
+            case .descendants:
+                print("Enter Node Id")
+                let nodeId = readLine()!
+                let node = try operations.getNode(nodeId: nodeId)
+                
+                print(operations.descendants(from: node))
+            
+            case .deleteDependency:
+                print("Enter Source Node Id")
+                let sourceNodeId = readLine()!
+                print("Enter Destination Node Id")
+                let destinationNodeId = readLine()!
+                
+                let sourceNode = try operations.getNode(nodeId: sourceNodeId)
+                let destinationNode = try operations.getNode(nodeId: destinationNodeId
+                )
+                
+                operations.deleteDependency(from: sourceNode, to: destinationNode)
+                
+            case .deleteNode:
+                print("Enter Node Id")
+                let nodeId = readLine()!
+                let node = try operations.getNode(nodeId: nodeId)
+                
+                operations.deleteNode(node: node)
+                
+            case .showAllDependencies:
+                operations.showDependencyGraph()
+            
+            case .invalid:
+                throw InputError.invalidInput
+                
+            default:
+                break
+            }
+        }
+        
+    } while optionType != .exit
+    
+    
+}
 
-print(adjacencyList.description)
+
+func main(){
+    
+    do{
+        try run()
+    }
+    
+    catch InputError.invalidInput{
+        print("Enter the correct input please!")
+        main()
+    }
+    catch InputError.wrongNodeId{
+        print("Node Id does not exist")
+        main()
+    }
+    catch{
+        print(error.localizedDescription)
+        main()
+    }
+}
+
+main()

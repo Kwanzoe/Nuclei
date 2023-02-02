@@ -10,8 +10,8 @@ public enum EdgeType {
 }
 
 public struct Edge<T: Hashable> {
-  public var source: Vertex<T> // 1
-  public var destination: Vertex<T>
+  public var source: Node<T> // 1
+  public var destination: Node<T>
 }
 
 
