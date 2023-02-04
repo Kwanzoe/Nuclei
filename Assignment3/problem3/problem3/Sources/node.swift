@@ -25,8 +25,4 @@ extension Node: Hashable {
   }
 }
 
-extension Node: CustomStringConvertible {
-  public var description: String {
-    return "\(nodeId)"
-  }
 }
