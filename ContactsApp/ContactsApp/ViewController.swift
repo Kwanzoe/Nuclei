@@ -13,24 +13,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-    
-    @IBAction func addContact(_ sender: Any) {
-        
-    }
-    
-    @IBAction func viewContacts(_ sender: UIButton) {
-        
-    }
-    
-    @IBAction func updateContact(_ sender: Any) {
-        
-    }
-    @IBAction func deleteContact(_ sender: Any) {
-        
-    }
-    
-    
     
 }
 

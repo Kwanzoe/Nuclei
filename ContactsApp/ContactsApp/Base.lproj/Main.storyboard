@@ -280,32 +280,34 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="deleteContactCell" id="Hfn-hH-EHA">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="40.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="50" width="393" height="115.33333587646484"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Hfn-hH-EHA" id="Bb9-PQ-BJR">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="40.666667938232422"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="115.33333587646484"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fkb-Jt-CTa">
-                                                    <rect key="frame" x="226" y="4" width="74" height="35"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cr2-gA-q37">
+                                                    <rect key="frame" x="40" y="10" width="42" height="95.333333333333329"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fkb-Jt-CTa">
+                                                    <rect key="frame" x="279" y="40" width="74" height="35.333333333333343"/>
                                                     <color key="backgroundColor" systemColor="labelColor"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" title="Delete">
                                                         <color key="baseForegroundColor" systemColor="secondarySystemBackgroundColor"/>
                                                     </buttonConfiguration>
                                                 </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cr2-gA-q37">
-                                                    <rect key="frame" x="40" y="10.000000000000002" width="42" height="20.666666666666671"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="fkb-Jt-CTa" firstAttribute="top" secondItem="Bb9-PQ-BJR" secondAttribute="top" constant="40" id="3kT-yl-5Hs"/>
+                                                <constraint firstAttribute="bottom" secondItem="fkb-Jt-CTa" secondAttribute="bottom" constant="40" id="9dQ-SB-0tE"/>
                                                 <constraint firstItem="cr2-gA-q37" firstAttribute="leading" secondItem="Bb9-PQ-BJR" secondAttribute="leading" constant="40" id="aXV-RM-zGg"/>
                                                 <constraint firstAttribute="bottom" secondItem="cr2-gA-q37" secondAttribute="bottom" constant="10" id="igW-ST-zLQ"/>
                                                 <constraint firstItem="cr2-gA-q37" firstAttribute="top" secondItem="Bb9-PQ-BJR" secondAttribute="top" constant="10" id="l6z-Xa-bDT"/>
+                                                <constraint firstAttribute="trailing" secondItem="fkb-Jt-CTa" secondAttribute="trailing" constant="40" id="nb1-G4-zdu"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
