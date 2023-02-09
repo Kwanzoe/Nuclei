@@ -9,6 +9,7 @@ import UIKit
 
 class ViewContactsViewController: UIViewController {
 
+    var data = ["Kwanzo 1234", "Parthiv 6909"]
     @IBOutlet weak var viewContactsTable: UITableView!
     
     override func viewDidLoad() {
@@ -22,7 +23,7 @@ class ViewContactsViewController: UIViewController {
 extension ViewContactsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        5
+        data.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -30,4 +31,18 @@ extension ViewContactsViewController: UITableViewDataSource {
         cell.textLabel?.text = "Kwanzo"
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if editingStyle == .delete{
+            data.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+
+    }
+    
 }

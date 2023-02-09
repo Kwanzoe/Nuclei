@@ -69,7 +69,6 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="deleteContact:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nmz-IM-BMV"/>
-                                    <segue destination="ccX-dO-js2" kind="show" id="FFU-2F-zD0"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IiC-oZ-Ktr">
@@ -94,7 +93,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="viewContacts:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nwn-QL-YSZ"/>
-                                    <segue destination="3FP-JK-AIl" kind="show" id="VjI-7n-Mhg"/>
+                                    <segue destination="3FP-JK-AIl" kind="show" id="oFA-zA-fdC"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KmD-hr-xHG">
@@ -232,7 +231,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="LK3-43-WPH">
-                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <rect key="frame" x="0.0" y="163" width="393" height="655"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="viewContactCell" id="QIU-vu-nmt">
@@ -248,14 +247,21 @@
                                     <outlet property="dataSource" destination="3FP-JK-AIl" id="iFi-HR-tbO"/>
                                 </connections>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Swipe right to delete" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6f5-yT-uL2">
+                                <rect key="frame" x="118" y="113" width="157" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="JLt-bT-Nv2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="LK3-43-WPH" firstAttribute="leading" secondItem="JLt-bT-Nv2" secondAttribute="leading" id="80g-JU-fza"/>
                             <constraint firstItem="JLt-bT-Nv2" firstAttribute="trailing" secondItem="LK3-43-WPH" secondAttribute="trailing" id="CMs-b7-nh9"/>
+                            <constraint firstItem="6f5-yT-uL2" firstAttribute="centerX" secondItem="XPS-0Q-XAE" secondAttribute="centerX" id="EjL-eF-cmf"/>
                             <constraint firstItem="JLt-bT-Nv2" firstAttribute="bottom" secondItem="LK3-43-WPH" secondAttribute="bottom" id="IUq-13-MLp"/>
-                            <constraint firstItem="LK3-43-WPH" firstAttribute="top" secondItem="JLt-bT-Nv2" secondAttribute="top" id="wp6-eu-4o6"/>
+                            <constraint firstItem="LK3-43-WPH" firstAttribute="top" secondItem="JLt-bT-Nv2" secondAttribute="top" constant="60" id="MT5-Hy-0VF"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="1Dh-Qp-SAQ"/>
@@ -266,74 +272,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="moD-EI-UhR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-33" y="585"/>
-        </scene>
-        <!--Delete Contact View Controller-->
-        <scene sceneID="ltr-Xe-AhY">
-            <objects>
-                <viewController id="ccX-dO-js2" customClass="DeleteContactViewController" customModule="ContactsApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="7ld-oA-qbx">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="sZL-z9-pjz">
-                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="deleteContactCell" id="Hfn-hH-EHA">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="115.33333587646484"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Hfn-hH-EHA" id="Bb9-PQ-BJR">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="115.33333587646484"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cr2-gA-q37">
-                                                    <rect key="frame" x="40" y="10" width="42" height="95.333333333333329"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fkb-Jt-CTa">
-                                                    <rect key="frame" x="279" y="40" width="74" height="35.333333333333343"/>
-                                                    <color key="backgroundColor" systemColor="labelColor"/>
-                                                    <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="plain" title="Delete">
-                                                        <color key="baseForegroundColor" systemColor="secondarySystemBackgroundColor"/>
-                                                    </buttonConfiguration>
-                                                </button>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="fkb-Jt-CTa" firstAttribute="top" secondItem="Bb9-PQ-BJR" secondAttribute="top" constant="40" id="3kT-yl-5Hs"/>
-                                                <constraint firstAttribute="bottom" secondItem="fkb-Jt-CTa" secondAttribute="bottom" constant="40" id="9dQ-SB-0tE"/>
-                                                <constraint firstItem="cr2-gA-q37" firstAttribute="leading" secondItem="Bb9-PQ-BJR" secondAttribute="leading" constant="40" id="aXV-RM-zGg"/>
-                                                <constraint firstAttribute="bottom" secondItem="cr2-gA-q37" secondAttribute="bottom" constant="10" id="igW-ST-zLQ"/>
-                                                <constraint firstItem="cr2-gA-q37" firstAttribute="top" secondItem="Bb9-PQ-BJR" secondAttribute="top" constant="10" id="l6z-Xa-bDT"/>
-                                                <constraint firstAttribute="trailing" secondItem="fkb-Jt-CTa" secondAttribute="trailing" constant="40" id="nb1-G4-zdu"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="ccX-dO-js2" id="i9p-vK-9q9"/>
-                                </connections>
-                            </tableView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="QHz-Gi-ut9"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="QHz-Gi-ut9" firstAttribute="trailing" secondItem="sZL-z9-pjz" secondAttribute="trailing" id="5nx-sX-8WZ"/>
-                            <constraint firstItem="QHz-Gi-ut9" firstAttribute="bottom" secondItem="sZL-z9-pjz" secondAttribute="bottom" id="5uS-nD-iOJ"/>
-                            <constraint firstItem="sZL-z9-pjz" firstAttribute="top" secondItem="QHz-Gi-ut9" secondAttribute="top" id="BVs-lj-yXM"/>
-                            <constraint firstItem="sZL-z9-pjz" firstAttribute="leading" secondItem="QHz-Gi-ut9" secondAttribute="leading" id="Lft-fg-vi1"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="H4S-VH-Lgw"/>
-                    <connections>
-                        <outlet property="deleteContactTableData" destination="Hfn-hH-EHA" id="y28-Iw-YyZ"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="R2P-Hq-wHS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="740" y="585"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7Gv-rA-fQ4">
@@ -357,9 +295,6 @@
     <resources>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="secondarySystemBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
