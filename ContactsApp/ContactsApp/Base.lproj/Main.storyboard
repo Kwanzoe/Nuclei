@@ -203,6 +203,9 @@
                                         <buttonConfiguration key="configuration" style="plain" title="Add">
                                             <color key="baseForegroundColor" red="0.85779719789999997" green="0.84383564970000002" blue="0.86078917980000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="addContactBtnTapped:" destination="ve1-PI-mbe" eventType="touchUpInside" id="k17-fC-kiQ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -217,6 +220,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="rYd-zs-Xx6"/>
+                    <connections>
+                        <outlet property="nameField" destination="YuW-eH-Qja" id="fhP-Ix-pZU"/>
+                        <outlet property="numberField" destination="IGi-yn-o1l" id="ZlQ-hQ-xhu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sQW-uJ-Ffh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
