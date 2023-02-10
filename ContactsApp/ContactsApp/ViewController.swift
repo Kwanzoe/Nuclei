@@ -26,10 +26,6 @@ class ViewController: UIViewController {
     @IBAction func updateContact(_ sender: Any) {
         
     }
-    @IBAction func deleteContact(_ sender: Any) {
-        
-    }
-    
     
     
 }

@@ -16,12 +16,11 @@ class AddContactDataViewController: UIViewController {
     
     @IBOutlet weak var nameField: UITextField!
         
-    @IBOutlet weak var numberField: UITextField!
+    @IBOutlet weak  var numberField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
     
     
@@ -31,18 +30,39 @@ class AddContactDataViewController: UIViewController {
             contact.phoneNumbers = [CNLabeledValue(
                 label: CNLabelPhoneNumberiPhone,
                 value: CNPhoneNumber(stringValue: numberField.text!))]
-            
             saveRequest.add(contact, toContainerWithIdentifier: nil)
-            
-            
+                
             do {
                 try store.execute(saveRequest)
+                
+                nameField.text = ""
+                numberField.text = ""
+                
             } catch {
                 print("Saving contact failed, error: \(error)")
             }
             
+            
         }
-        
     }
     
+    
 }
+
+
+//if nameField.text != "" && numberField.text != ""{
+//    contact.givenName  = nameField.text!
+//    contact.phoneNumbers = [CNLabeledValue(
+//        label: CNLabelPhoneNumberiPhone,
+//        value: CNPhoneNumber(stringValue: numberField.text!))]
+//
+//    saveRequest.add(contact, toContainerWithIdentifier: nil)
+//
+//
+//    do {
+//        try store.execute(saveRequest)
+//    } catch {
+//        print("Saving contact failed, error: \(error)")
+//    }
+//
+//}
