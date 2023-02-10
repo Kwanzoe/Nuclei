@@ -15,7 +15,7 @@
 		41631DA62988E7690089F557 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41631DA52988E7690089F557 /* main.swift */; };
 		41EC5BEF298A8F2E00073064 /* edge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EC5BEE298A8F2E00073064 /* edge.swift */; };
 		41EC5BF1298A8F6600073064 /* graphable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EC5BF0298A8F6600073064 /* graphable.swift */; };
-		41EC5BF3298A904F00073064 /* adjacencyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EC5BF2298A904F00073064 /* adjacencyList.swift */; };
+		41EC5BF3298A904F00073064 /* AdjacencyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EC5BF2298A904F00073064 /* AdjacencyList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -40,7 +40,7 @@
 		41631DA52988E7690089F557 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		41EC5BEE298A8F2E00073064 /* edge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = edge.swift; sourceTree = "<group>"; };
 		41EC5BF0298A8F6600073064 /* graphable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = graphable.swift; sourceTree = "<group>"; };
-		41EC5BF2298A904F00073064 /* adjacencyList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = adjacencyList.swift; sourceTree = "<group>"; };
+		41EC5BF2298A904F00073064 /* AdjacencyList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdjacencyList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +84,7 @@
 			children = (
 				410684902989968100ADE1A3 /* node.swift */,
 				414E97C3298C2A4A004963CB /* errors.swift */,
-				41EC5BF2298A904F00073064 /* adjacencyList.swift */,
+				41EC5BF2298A904F00073064 /* AdjacencyList.swift */,
 				414E97BD298B9102004963CB /* otherOperations.swift */,
 				41EC5BF0298A8F6600073064 /* graphable.swift */,
 				41EC5BEE298A8F2E00073064 /* edge.swift */,
@@ -160,7 +160,7 @@
 				410684912989968100ADE1A3 /* node.swift in Sources */,
 				414E97C2298C21EF004963CB /* menuOptions.swift in Sources */,
 				414E97C0298C20DB004963CB /* menu.swift in Sources */,
-				41EC5BF3298A904F00073064 /* adjacencyList.swift in Sources */,
+				41EC5BF3298A904F00073064 /* AdjacencyList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

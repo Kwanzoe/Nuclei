@@ -50,19 +50,3 @@ class AddContactDataViewController: UIViewController {
 }
 
 
-//if nameField.text != "" && numberField.text != ""{
-//    contact.givenName  = nameField.text!
-//    contact.phoneNumbers = [CNLabeledValue(
-//        label: CNLabelPhoneNumberiPhone,
-//        value: CNPhoneNumber(stringValue: numberField.text!))]
-//
-//    saveRequest.add(contact, toContainerWithIdentifier: nil)
-//
-//
-//    do {
-//        try store.execute(saveRequest)
-//    } catch {
-//        print("Saving contact failed, error: \(error)")
-//    }
-//
-//}

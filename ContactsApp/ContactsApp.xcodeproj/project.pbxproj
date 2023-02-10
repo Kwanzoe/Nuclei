@@ -14,6 +14,7 @@
 		41446D4B299221D3008C7C0F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41446D49299221D3008C7C0F /* Main.storyboard */; };
 		41446D4D299221D5008C7C0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41446D4C299221D5008C7C0F /* Assets.xcassets */; };
 		41446D50299221D5008C7C0F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41446D4E299221D5008C7C0F /* LaunchScreen.storyboard */; };
+		417BE046299635ED00F84717 /* UpdateContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417BE045299635ED00F84717 /* UpdateContactViewController.swift */; };
 		418E66F629951825003A4271 /* ViewContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418E66F529951825003A4271 /* ViewContactsViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		41446D4C299221D5008C7C0F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		41446D4F299221D5008C7C0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		41446D51299221D5008C7C0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		417BE045299635ED00F84717 /* UpdateContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateContactViewController.swift; sourceTree = "<group>"; };
 		418E66F529951825003A4271 /* ViewContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewContactsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -65,6 +67,7 @@
 				41446D47299221D3008C7C0F /* ViewController.swift */,
 				412D25BA2992C74D009FAFFC /* AddContactDataViewController.swift */,
 				418E66F529951825003A4271 /* ViewContactsViewController.swift */,
+				417BE045299635ED00F84717 /* UpdateContactViewController.swift */,
 				41446D49299221D3008C7C0F /* Main.storyboard */,
 				41446D4C299221D5008C7C0F /* Assets.xcassets */,
 				41446D4E299221D5008C7C0F /* LaunchScreen.storyboard */,
@@ -148,6 +151,7 @@
 				418E66F629951825003A4271 /* ViewContactsViewController.swift in Sources */,
 				41446D44299221D3008C7C0F /* AppDelegate.swift in Sources */,
 				41446D46299221D3008C7C0F /* SceneDelegate.swift in Sources */,
+				417BE046299635ED00F84717 /* UpdateContactViewController.swift in Sources */,
 				412D25BB2992C74D009FAFFC /* AddContactDataViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

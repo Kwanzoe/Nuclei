@@ -200,10 +200,92 @@
             </objects>
             <point key="canvasLocation" x="1219" y="-149"/>
         </scene>
+        <!--Update Contact View Controller-->
+        <scene sceneID="07d-bg-RoC">
+            <objects>
+                <viewController storyboardIdentifier="updateContact" useStoryboardIdentifierAsRestorationIdentifier="YES" id="83x-hP-ecA" customClass="UpdateContactViewController" customModule="ContactsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4fH-KG-tkL">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="nZv-hN-fI6" userLabel="Vertical Stack View">
+                                <rect key="frame" x="46.666666666666657" y="345" width="300" height="162.33333333333337"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="YVm-7q-Qyc" userLabel="Horizontal Stack View">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="34"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0OH-dO-Zda">
+                                                <rect key="frame" x="0.0" y="0.0" width="61.666666666666664" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="61.670000000000002" id="Vmn-Jc-LqA"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZEE-Xa-JHz">
+                                                <rect key="frame" x="71.666666666666643" y="0.0" width="228.33333333333337" height="34"/>
+                                                <color key="backgroundColor" red="0.85779719789999997" green="0.84383564970000002" blue="0.86078917980000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="xhO-Wf-po4" userLabel="Horizontal Stack View">
+                                        <rect key="frame" x="0.0" y="64" width="300" height="34"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gZ0-nd-yWV">
+                                                <rect key="frame" x="0.0" y="0.0" width="61.666666666666664" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JM8-YO-TMK">
+                                                <rect key="frame" x="71.666666666666643" y="0.0" width="228.33333333333337" height="34"/>
+                                                <color key="backgroundColor" red="0.85779719789999997" green="0.84383564970000002" blue="0.86078917980000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jJR-yk-b4F">
+                                        <rect key="frame" x="0.0" y="127.99999999999999" width="300" height="34.333333333333329"/>
+                                        <color key="backgroundColor" systemColor="labelColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Save">
+                                            <color key="baseForegroundColor" red="0.85779719789999997" green="0.84383564970000002" blue="0.86078917980000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="addContactBtnTapped:" destination="ve1-PI-mbe" eventType="touchUpInside" id="8eU-MA-or8"/>
+                                            <action selector="saveBtnTapped:" destination="83x-hP-ecA" eventType="touchUpInside" id="x0p-EX-SJb"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="30D-dB-9GR"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lbh-Qo-zcv"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nZv-hN-fI6" firstAttribute="centerY" secondItem="4fH-KG-tkL" secondAttribute="centerY" id="aSw-tL-C4e"/>
+                            <constraint firstItem="nZv-hN-fI6" firstAttribute="centerX" secondItem="4fH-KG-tkL" secondAttribute="centerX" id="pLK-tC-5pa"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="contactNameField" destination="ZEE-Xa-JHz" id="2V2-dR-OKn"/>
+                        <outlet property="contactNoField" destination="JM8-YO-TMK" id="K7p-fZ-igZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LPj-ch-lam" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="877" y="628"/>
+        </scene>
         <!--View Contacts View Controller-->
         <scene sceneID="yEV-GT-W0d">
             <objects>
-                <viewController id="3FP-JK-AIl" customClass="ViewContactsViewController" customModule="ContactsApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="viewContacts" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3FP-JK-AIl" customClass="ViewContactsViewController" customModule="ContactsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XPS-0Q-XAE">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -223,6 +305,7 @@
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="3FP-JK-AIl" id="iFi-HR-tbO"/>
+                                    <outlet property="delegate" destination="3FP-JK-AIl" id="FEj-Xp-Nlr"/>
                                 </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe right to delete" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ScQ-QJ-auO">

@@ -10,6 +10,12 @@ import Contacts
 
 class ViewContactsViewController: UIViewController {
 
+   
+    
+    @IBOutlet weak var viewContactsTable: UITableView!
+    let saveRequest = CNSaveRequest()
+    let store = CNContactStore()
+    
     lazy var contacts: [CNContact] = {
         let contactStore = CNContactStore()
         let keysToFetch = [
@@ -41,8 +47,6 @@ class ViewContactsViewController: UIViewController {
     }()
     
     
-    @IBOutlet weak var viewContactsTable: UITableView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -51,7 +55,7 @@ class ViewContactsViewController: UIViewController {
 
 }
 
-extension ViewContactsViewController: UITableViewDataSource {
+extension ViewContactsViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         contacts.count
@@ -63,18 +67,51 @@ extension ViewContactsViewController: UITableViewDataSource {
         
         return cell
     }
-    
-    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        
-        if editingStyle == .delete{
-            contacts.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        }
 
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let edit = UIContextualAction(style: .normal, title: "Edit") {_,_,_ in
+            
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "updateContact") as! UpdateContactViewController
+            
+            vc.modalPresentationStyle = .fullScreen
+            
+            vc.contactName = self.contacts[indexPath.row].givenName
+            vc.contactNo = self.contacts[indexPath.row].phoneNumbers[0].value.stringValue
+            
+            self.contacts.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            
+            self.saveRequest.delete(self.contacts[indexPath.row].mutableCopy() as! CNMutableContact)
+           
+            do{
+                try self.store.execute(self.saveRequest)
+                print("Success, You deleted the user")
+              } catch let e{
+                print("Error = \(e)")
+              }
+            
+            self.navigationController?.pushViewController(vc, animated: true)
+            
+        }
+        
+        let delete = UIContextualAction(style: .destructive, title: "Delete") {_,_,_ in
+            
+            self.contacts.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            self.saveRequest.delete(self.contacts[indexPath.row].mutableCopy() as! CNMutableContact)
+           
+            do{
+                try self.store.execute(self.saveRequest)
+                print("Success, You deleted the user")
+              } catch let e{
+                print("Error = \(e)")
+              }
+        }
+        
+        let swipeActions = UISwipeActionsConfiguration(actions: [delete, edit])
+        swipeActions.performsFirstActionWithFullSwipe = false // disables full swipe action
+
+        return swipeActions
     }
-    
 }
