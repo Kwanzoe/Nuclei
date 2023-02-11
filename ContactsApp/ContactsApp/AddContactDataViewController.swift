@@ -31,6 +31,8 @@ class AddContactDataViewController: UIViewController {
                 label: CNLabelPhoneNumberiPhone,
                 value: CNPhoneNumber(stringValue: numberField.text!))]
             saveRequest.add(contact, toContainerWithIdentifier: nil)
+            
+            print(contact.givenName)
                 
             do {
                 try store.execute(saveRequest)
@@ -42,6 +44,7 @@ class AddContactDataViewController: UIViewController {
                 print("Saving contact failed, error: \(error)")
             }
             
+            dismiss(animated: true)
             
         }
     }

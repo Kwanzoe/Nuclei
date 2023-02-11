@@ -52,7 +52,12 @@ class ViewContactsViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+    
 
+    @IBAction func backBtnTapped(_ sender: UIButton) {
+        dismiss(animated: true)
+    }
 }
 
 extension ViewContactsViewController: UITableViewDataSource, UITableViewDelegate {
@@ -72,34 +77,23 @@ extension ViewContactsViewController: UITableViewDataSource, UITableViewDelegate
         
         let edit = UIContextualAction(style: .normal, title: "Edit") {_,_,_ in
             
-            let vc = self.storyboard?.instantiateViewController(withIdentifier: "updateContact") as! UpdateContactViewController
+            let updateContactVC = self.storyboard?.instantiateViewController(withIdentifier: "updateContact") as! UpdateContactViewController
             
-            vc.modalPresentationStyle = .fullScreen
+            updateContactVC.modalPresentationStyle = .fullScreen
             
-            vc.contactName = self.contacts[indexPath.row].givenName
-            vc.contactNo = self.contacts[indexPath.row].phoneNumbers[0].value.stringValue
+            updateContactVC.contactName = self.contacts[indexPath.row].givenName
+            updateContactVC.contactNo = self.contacts[indexPath.row].phoneNumbers[0].value.stringValue
+            updateContactVC.indexPath = indexPath
             
-            self.contacts.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .fade)
             
-            self.saveRequest.delete(self.contacts[indexPath.row].mutableCopy() as! CNMutableContact)
-           
-            do{
-                try self.store.execute(self.saveRequest)
-                print("Success, You deleted the user")
-              } catch let e{
-                print("Error = \(e)")
-              }
-            
-            self.navigationController?.pushViewController(vc, animated: true)
-            
+            self.present(updateContactVC, animated: true)
         }
         
         let delete = UIContextualAction(style: .destructive, title: "Delete") {_,_,_ in
             
+            self.saveRequest.delete(self.contacts[indexPath.row].mutableCopy() as! CNMutableContact)
             self.contacts.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
-            self.saveRequest.delete(self.contacts[indexPath.row].mutableCopy() as! CNMutableContact)
            
             do{
                 try self.store.execute(self.saveRequest)
