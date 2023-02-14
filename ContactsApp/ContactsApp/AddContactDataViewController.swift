@@ -10,9 +10,7 @@ import Contacts
 
 class AddContactDataViewController: UIViewController {
     
-    let contact = CNMutableContact()
-    let store = CNContactStore()
-    let saveRequest = CNSaveRequest()
+    
     
     @IBOutlet weak var nameField: UITextField!
         
@@ -25,6 +23,11 @@ class AddContactDataViewController: UIViewController {
     
     
     @IBAction func addContactBtnTapped(_ sender: UIButton) {
+        
+        let contact = CNMutableContact()
+        let store = CNContactStore()
+        let saveRequest = CNSaveRequest()
+        
         if nameField.text != "" && numberField.text != ""{
             contact.givenName  = nameField.text!
             contact.phoneNumbers = [CNLabeledValue(
@@ -44,9 +47,15 @@ class AddContactDataViewController: UIViewController {
                 print("Saving contact failed, error: \(error)")
             }
             
-            dismiss(animated: true)
+//            dismiss(animated: true)
             
         }
+    }
+    
+    
+    @IBAction func goBackBtnTapped(_ sender: UIButton) {
+        
+        dismiss(animated:true)
     }
     
     

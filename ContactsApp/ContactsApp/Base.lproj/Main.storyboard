@@ -155,13 +155,24 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gNU-XW-lz7">
+                                <rect key="frame" x="115" y="395" width="181" height="34.333333333333314"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Go back"/>
+                                <connections>
+                                    <action selector="goBackBtnTapped:" destination="ve1-PI-mbe" eventType="touchUpInside" id="0Lk-zd-ANn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2DQ-fI-SS0"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="2DQ-fI-SS0" firstAttribute="trailing" secondItem="ctc-oI-1we" secondAttribute="trailing" constant="30" id="4XG-37-4uz"/>
+                            <constraint firstItem="gNU-XW-lz7" firstAttribute="leading" secondItem="2DQ-fI-SS0" secondAttribute="leading" constant="115" id="7Co-jR-1SX"/>
                             <constraint firstItem="ctc-oI-1we" firstAttribute="leading" secondItem="2DQ-fI-SS0" secondAttribute="leading" constant="30" id="Duv-UF-3w5"/>
                             <constraint firstItem="ctc-oI-1we" firstAttribute="top" secondItem="2DQ-fI-SS0" secondAttribute="top" constant="30" id="VEB-uk-Tcd"/>
+                            <constraint firstItem="gNU-XW-lz7" firstAttribute="top" secondItem="ctc-oI-1we" secondAttribute="bottom" constant="97" id="Yhh-fd-h75"/>
+                            <constraint firstItem="2DQ-fI-SS0" firstAttribute="trailing" secondItem="gNU-XW-lz7" secondAttribute="trailing" constant="97" id="Z0Q-qE-MDy"/>
                             <constraint firstItem="2DQ-fI-SS0" firstAttribute="bottom" secondItem="ctc-oI-1we" secondAttribute="bottom" constant="520" id="zgT-8b-v0B"/>
                         </constraints>
                     </view>
@@ -173,7 +184,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sQW-uJ-Ffh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1219" y="-149"/>
+            <point key="canvasLocation" x="1217.5572519083969" y="-149.29577464788733"/>
         </scene>
         <!--Update Contact View Controller-->
         <scene sceneID="07d-bg-RoC">
